@@ -1,18 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        h1 {
-            text-align: center;
-            color: aqua;
-        }
-    </style>
-</head>
-<body>
-    <h1>Hello Git</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>☀WeatherApp☀</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/5b5334e432.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link href="WeatherApp.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <input
+            id="city-input"
+            class="search-box"
+            type="text"
+            placeholder="Enter city"
+          />
+        </div>
+        <div class="col">
+          <input class="search-btn" type="submit" value="Search ☀" />
+        </div>
+        <div class="col">
+          <input
+            id="currentLocation-btn"
+            class="currentLocation-btn"
+            type="submit"
+            value="Now"
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm city">Chicago</div>
+        <div class="col-sm">
+          <img
+            class="weather-icon"
+            id="weather-icon"
+            src=" http://openweathermap.org/img/wn/10d@2x.png"
+            alt=""
+          />
+        </div>
+        <div class="col-sm temp">
+          <span id="temp" class="temp">18</span>
+          <span class="units">
+          <a href="#" id="celsius-link" class="active" >°C</a> |
+          <a href="#" id="fahrenheit-link">°F</a>
+        </span>
+        </div>
+      </div>
+       <div class="current-date">
+        <div id="hour-minute">12:20pm</div>
+        <div id="day">Wednesday</div>
+        <div id="date">8/4/21</div>
+      </div>
+       <div class="col-6 "></div>
+        <ul class="temp-details">
+         <li class="temp-desc">Clear sky<span id="temp-desc"></span></li>
+         <li class= "humidity">Humidity: <span id="humidity"></span>%</li>
+         <li class= "wind-speed">Wind: <span id="wind-speed"></span> km/h</li>
+        </ul>
+        </div>
+        <ul>
+        <li class="forecast day-1">
+          <div>Thu Aug 5th</div>
+          18°F <i class="fas fa-sun"></i>
+        </li>
+        <li class="forecast day-2">
+          <div>Mon Aug 25th</div>
+          18°F <i class="fas fa-cloud-sun"></i>
+        </li>
+        <li class="forecast day-3">
+          <div>Sat Aug 7th</div>
+          18°F <i class="fas fa-cloud-rain"></i>
+        </li>
+        <li class="forecast day-4">
+          <div>Sun Aug 8th</div>
+          18°F <i class="fas fa-cloud"></i>
+        </li>
+        <li class="forecast day-5">
+          <div>Mon Aug 9th</div>
+          18°F <i class="fas fa-sun"></i>
+        </li>
+        <li class="forecast day-6">
+          <div>Mon Aug 10th</div>
+          18°F <i class="fas fa-sun"></i>
+        </li>
+      </ul>
+        <footer>
+        <a class="footer" href="#" target="blank">Open-source code</a> by Haleh Motlagh
+      </footer>
+    </div>
+    <script src="WeatherApp.js"></script>
+  </body>
 </html>

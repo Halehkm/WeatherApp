@@ -1,0 +1,156 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /*overflow: hidden;*/
+  color: #27296d;
+  font-family: "Frank Ruhl Libre", serif;
+  background-image: url(../../img/weather-background.test\ 4.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+ul {
+  list-style-type: none;
+}
+footer {
+  position: relative;
+  font-size: smaller;
+  top: 326px;
+  left: -78px;
+}
+.footer {
+  text-decoration: none;
+  color: #27296d;
+}
+a .footer:hover {
+  text-decoration: underline;
+}
+.forecast {
+  position: relative;
+  left: 260px;
+  top: 60px;
+  border: solid 1px;
+  border-radius: 10px 100px / 120px;
+  max-width: 140px;
+  max-height: 76px;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 15px 20px;
+  box-shadow: 2px 2px #74ebd5, -0.3em 0 0.4em #fcdad9;
+  line-height: 15px;
+  margin-bottom: 10px;
+}
+
+.container {
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 20px 2px #fcdad9;
+}
+
+.search-box {
+  margin-left: 130px;
+  width: 254px;
+  margin-top: 78px;
+  border-radius: 5px;
+  border: solid 1px #27296d;
+  padding: 5px 10px;
+  font-size: small;
+  background-color: #fcdad9;
+}
+.search-btn,
+.currentLocation-btn {
+  margin-top: 78px;
+  border-radius: 4px;
+  font-size: small;
+  padding: 5px 10px;
+  color: #27296d;
+  border: solid 1px #27296d;
+  background-color: #fcdad9;
+}
+.currentLocation-btn {
+  position: relative;
+  left: -47px;
+}
+.city {
+  position: relative;
+  left: 48px;
+  font-size: 38px;
+  font-weight: bolder;
+  text-transform: capitalize;
+  margin-top: 100px;
+}
+.temp {
+  position: relative;
+  font-weight: bold;
+  font-size: 38px;
+  margin-top: 100px;
+  right: 50px;
+}
+.units {
+  font-size: small;
+  position: absolute;
+  top: 10px;
+  left: 2px;
+}
+.current-date {
+  position: relative;
+  top: 36px;
+  left: 100px;
+  font-size: 20px;
+  line-height: 1.75;
+  font-weight: bold;
+}
+
+.temp-details {
+  position: relative;
+  left: 336px;
+  bottom: 62px;
+  font-size: 15px;
+  line-height: 1.75;
+  font-weight: bold;
+}
+
+.weather-icon {
+  position: relative;
+  top: 300px;
+  width: 140px;
+  height: 140;
+  left: -7px;
+}
+.active {
+  color: #27296d;
+  text-decoration: none;
+  cursor: default;
+}
+.active:hover {
+  text-decoration: none;
+}
+
+.day-1 {
+  left: 330px;
+}
+.day-2 {
+  left: 320px;
+}
+.day-3 {
+  left: 310px;
+}
+.day-4 {
+  left: 300px;
+}
+.day-5 {
+  left: 280px;
+}
+.day-6 {
+  left: 260px;
+}
