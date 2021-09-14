@@ -77,10 +77,6 @@ a .footer:hover {
   border: solid 1px #27296d;
   background-color: #fcdad9;
 }
-.currentLocation-btn {
-  position: relative;
-  left: -47px;
-}
 .city {
   position: relative;
   left: 48px;
@@ -152,5 +148,5 @@ a .footer:hover {
   left: 280px;
 }
 .day-6 {
-  left: 260px;
+  left: 250px;
 }

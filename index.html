@@ -27,29 +27,23 @@
   </head>
   <body>
     <div class="container">
-      <div class="row">
-        <div class="col">
+     <form id="city-search">
           <input
             id="city-input"
             class="search-box"
             type="text"
             placeholder="Enter city"
           />
-        </div>
-        <div class="col">
           <input class="search-btn" type="submit" value="Search ☀" />
-        </div>
-        <div class="col">
           <input
             id="currentLocation-btn"
             class="currentLocation-btn"
             type="submit"
             value="Now"
           />
-        </div>
-      </div>
+    </form>
       <div class="row">
-        <div class="col-sm city">Chicago</div>
+        <div id="city" class="col-sm city">Chicago</div>
         <div class="col-sm">
           <img
             class="weather-icon"
@@ -105,7 +99,7 @@
         </li>
       </ul>
         <footer>
-        <a class="footer" href="#" target="blank">Open-source code</a> by Haleh Motlagh
+        <a class="footer" href="https://github.com/Halehkm/WeatherApp" target="blank">Open-source code</a> by Haleh Motlagh
       </footer>
     </div>
     <script src="WeatherApp.js"></script>
