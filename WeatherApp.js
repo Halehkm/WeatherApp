@@ -23,6 +23,52 @@ function tempDetails(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+
+  localTime();
+}
+
+function localTime() {
+  let currentCity = document.querySelector("#city");
+  let cityInput = document.querySelector("#city-input");
+  currentCity.innerHTML = `${cityInput.value}`;
+  let apiKey = `24b62e707b504c83a59cadfaa50afb0a`;
+  let apiUrl = `https://timezone.abstractapi.com/v1/current_time/?api_key=${apiKey}&location=${cityInput.value}`;
+  axios.get(apiUrl).then(formatDate);
+}
+
+function formatDate(response) {
+  let currentTime = document.querySelector("#hour-minute");
+  let currentDay = document.querySelector("#day");
+  let currentDate = document.querySelector("#date");
+  let date = new Date(response.data.datetime);
+
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+  let month = date.getMonth() + 1;
+  let DD = date.getDate();
+  let year = date.getFullYear();
+
+  currentTime.innerHTML = `${hours}:${minutes}`;
+  currentDay.innerHTML = `${day}`;
+  currentDate.innerHTML = `${month}/${DD}/${year}`;
 }
 
 let city = document.querySelector("#city-search");
