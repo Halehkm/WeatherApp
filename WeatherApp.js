@@ -15,6 +15,8 @@ function tempDetails(response) {
   let humidity = document.querySelector("#humidity");
   let weatherIcon = document.querySelector("#weather-icon");
 
+  celsiusTemperature = response.data.main.temp;
+
   currentTemp.innerHTML = Math.round(response.data.main.temp);
   tempDescription.innerHTML = response.data.weather[0].description;
   windSpeed.innerHTML = Math.round(response.data.wind.speed);
@@ -94,8 +96,6 @@ function localTemp(response) {
   let nowWindSpeed = document.querySelector("#wind-speed");
   let nowHumidity = document.querySelector("#humidity");
   let nowWeatherIcon = document.querySelector("#weather-icon");
-
-  celsiusTemperature = response.data.main.temp;
 
   nowCity.innerHTML = response.data.name;
   nowTemp.innerHTML = Math.round(response.data.main.temp);
