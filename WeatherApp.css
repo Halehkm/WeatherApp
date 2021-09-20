@@ -35,17 +35,17 @@ a .footer:hover {
 }
 .forecast {
   position: relative;
-  left: 260px;
-  top: 60px;
+  left: 315px;
+  top: 6px;
   border: solid 1px;
   border-radius: 10px 100px / 120px;
-  max-width: 140px;
-  max-height: 76px;
+  max-width: 126px;
+  max-height: 55px;
   font-size: 15px;
   font-weight: bold;
   padding: 15px 20px;
   box-shadow: 2px 2px #74ebd5, -0.3em 0 0.4em #fcdad9;
-  line-height: 15px;
+  line-height: 2px;
   margin-bottom: 10px;
 }
 
@@ -109,7 +109,7 @@ a .footer:hover {
 
 .temp-details {
   position: relative;
-  left: 336px;
+  left: 307px;
   bottom: 62px;
   font-size: 15px;
   line-height: 1.75;
@@ -132,7 +132,7 @@ a .footer:hover {
   text-decoration: none;
 }
 
-.day-1 {
+/* .day-1 {
   left: 330px;
 }
 .day-2 {
@@ -149,4 +149,4 @@ a .footer:hover {
 }
 .day-6 {
   left: 250px;
-}
+} */
