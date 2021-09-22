@@ -94,7 +94,7 @@ function forecast(response) {
     if (index < 6) {
       forecastHTML =
         forecastHTML +
-        `<li class="forecast day-1">
+        `<li class="forecast day-${index+1}">
           <div>${formatForecastDate(forecastDay.dt)} </div>
           ${Math.round(
             forecastDay.temp.max

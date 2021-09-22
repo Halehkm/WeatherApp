@@ -90,17 +90,15 @@ a .footer:hover {
   font-weight: bold;
   font-size: 38px;
   margin-top: 100px;
-  right: 50px;
 }
 .units {
   font-size: small;
   position: absolute;
   top: 10px;
-  left: 2px;
 }
 .current-date {
   position: relative;
-  top: 36px;
+  top: 21px;
   left: 100px;
   font-size: 20px;
   line-height: 1.75;
@@ -109,8 +107,8 @@ a .footer:hover {
 
 .temp-details {
   position: relative;
-  left: 307px;
-  bottom: 62px;
+  left: 418px;
+  bottom: 80px;
   font-size: 15px;
   line-height: 1.75;
   font-weight: bold;
@@ -121,7 +119,7 @@ a .footer:hover {
   top: 300px;
   width: 140px;
   height: 140;
-  left: -7px;
+  left: 50px;
 }
 .active {
   color: #27296d;
@@ -132,21 +130,27 @@ a .footer:hover {
   text-decoration: none;
 }
 
-/* .day-1 {
-  left: 330px;
+.day-1 {
+  top: 302px;
+  left: -168px;
 }
 .day-2 {
-  left: 320px;
+  top: 305px;
+  left: -89px;
 }
 .day-3 {
-  left: 310px;
+  top: 303px;
+  left: 29px;
 }
 .day-4 {
-  left: 300px;
+  top: 238px;
+  left: 180px;
 }
 .day-5 {
-  left: 280px;
+  top: 109px;
+  left: 279px;
 }
 .day-6 {
-  left: 250px;
-} */
+  top: -25px;
+  left: 333px;
+}
