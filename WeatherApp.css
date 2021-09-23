@@ -92,7 +92,7 @@ a .footer:hover {
   font-size: small;
   position: absolute;
   top: 10px;
-  left:76px;
+  left:80px;
 }
 .current-date {
   position: relative;
@@ -112,10 +112,10 @@ a .footer:hover {
 
 .weather-icon {
   position: relative;
-  top: 300px;
+  top: 227px;
   width: 140px;
   height: 140;
-  left: 50px;
+  left: 37px;
 }
 .active {
   color: #27296d;
