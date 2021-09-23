@@ -145,6 +145,8 @@ function localTemp(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  localTime(response.data.name);
+  forecastTemp(response.data.coord);
 }
 
 let nowCitySearch = document.querySelector("#currentLocation-btn");
