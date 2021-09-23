@@ -1,11 +1,16 @@
+
+function searchCity(city) {
+  let apiKey = `3a887c11a858210e0003566c69e3307b`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+  axios(apiUrl).then(tempDetails);
+}
+
 function citySearch(event) {
   event.preventDefault();
   let currentCity = document.querySelector("#city");
   let cityInput = document.querySelector("#city-input");
-  currentCity.innerHTML = `${cityInput.value}`;
-  let apiKey = `3a887c11a858210e0003566c69e3307b`;
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput.value}&appid=${apiKey}&units=metric`;
-  axios(apiUrl).then(tempDetails);
+  currentCity.innerHTML = `${cityInput.value}`; 
+  searchCity(cityInput.value);
 }
 
 function tempDetails(response) {
@@ -15,7 +20,7 @@ function tempDetails(response) {
   let humidity = document.querySelector("#humidity");
   let weatherIcon = document.querySelector("#weather-icon");
 
-  celsiusTemperature = response.data.main.temp;
+  fahrenheitTemperature = response.data.main.temp;
 
   currentTemp.innerHTML = Math.round(response.data.main.temp);
   tempDescription.innerHTML = response.data.weather[0].description;
@@ -26,16 +31,13 @@ function tempDetails(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
 
-  localTime();
+  localTime(response.data.name);
   forecastTemp(response.data.coord);
 }
 
-function localTime() {
-  let currentCity = document.querySelector("#city");
-  let cityInput = document.querySelector("#city-input");
-  currentCity.innerHTML = `${cityInput.value}`;
+function localTime(city) {
   let apiKey = `24b62e707b504c83a59cadfaa50afb0a`;
-  let apiUrl = `https://timezone.abstractapi.com/v1/current_time/?api_key=${apiKey}&location=${cityInput.value}`;
+  let apiUrl = `https://timezone.abstractapi.com/v1/current_time/?api_key=${apiKey}&location=${city}`;
   axios.get(apiUrl).then(formatDate);
 }
 
@@ -91,14 +93,14 @@ function forecast(response) {
   let forecastHTML = "";
 
   forecastDaily.forEach(function (forecastDay, index) {
-    if (index < 6) {
+    if (index > 0 && index < 7) {
       forecastHTML =
         forecastHTML +
-        `<li class="forecast day-${index+1}">
+        `<li class="forecast day-${index}">
           <div>${formatForecastDate(forecastDay.dt)} </div>
           ${Math.round(
             forecastDay.temp.max
-          )}°C <img src="http://openweathermap.org/img/wn/${
+          )}°F <img src="http://openweathermap.org/img/wn/${
           forecastDay.weather[0].icon
         }@2x.png" alt="" width="35"/>
         </li>`;
@@ -109,7 +111,7 @@ function forecast(response) {
 
 function forecastTemp(coords) {
   apiKey = `3a887c11a858210e0003566c69e3307b`;
-  apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coords.lat}&lon=${coords.lon}&appid=${apiKey}&units=metric`;
+  apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coords.lat}&lon=${coords.lon}&appid=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(forecast);
 }
 
@@ -122,7 +124,7 @@ function currentLocationTemp(position) {
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
   let apiKey = `3a887c11a858210e0003566c69e3307b`;
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(localTemp);
 }
 
@@ -151,7 +153,7 @@ nowCitySearch.addEventListener("click", currentLocation);
 function fToC(event) {
   event.preventDefault();
   let currentTemp = document.querySelector("#temp");
-  let fahrTemp = (celsiusTemperature * 9) / 5 + 32;
+  let fahrTemp = (fahrenheitTemperature - 32) * (5 / 9);
   currentTemp.innerHTML = Math.round(fahrTemp);
   celsius.classList.remove("active");
   fahrenheit.classList.add("active");
@@ -159,15 +161,17 @@ function fToC(event) {
 function cToF(event) {
   event.preventDefault();
   let currentTemp = document.querySelector("#temp");
-  currentTemp.innerHTML = Math.round(celsiusTemperature);
+  currentTemp.innerHTML = Math.round(fahrenheitTemperature);
   fahrenheit.classList.remove("active");
   celsius.classList.add("active");
 }
 
-let celsiusTemperature = null;
+let fahrenheitTemperature = null;
 
 let celsius = document.querySelector("#celsius-link");
 celsius.addEventListener("click", cToF);
 
 let fahrenheit = document.querySelector("#fahrenheit-link");
 fahrenheit.addEventListener("click", fToC);
+
+searchCity("Chicago");
