@@ -174,4 +174,4 @@ celsius.addEventListener("click", cToF);
 let fahrenheit = document.querySelector("#fahrenheit-link");
 fahrenheit.addEventListener("click", fToC);
 
-searchCity("Chicago");
+searchCity("chicago");

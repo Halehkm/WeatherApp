@@ -9,9 +9,8 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  /*overflow: hidden;*/
   color: #27296d;
-  font-family: "Frank Ruhl Libre", serif;
+  font-family: "Adamina", serif;
   background-image: url(../../img/weather-background.test\ 4.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -22,7 +21,7 @@ ul {
 }
 footer {
   position: relative;
-  font-size: smaller;
+  font-size: 10px;
   top: 326px;
   left: -78px;
 }
@@ -41,8 +40,7 @@ a .footer:hover {
   border-radius: 10px 100px / 120px;
   max-width: 126px;
   max-height: 55px;
-  font-size: 15px;
-  font-weight: bold;
+  font-size: 12px;
   padding: 15px 20px;
   box-shadow: 2px 2px #74ebd5, -0.3em 0 0.4em #fcdad9;
   line-height: 2px;
@@ -81,13 +79,11 @@ a .footer:hover {
   position: relative;
   left: 48px;
   font-size: 38px;
-  font-weight: bolder;
   text-transform: capitalize;
   margin-top: 100px;
 }
 .temp {
   position: relative;
-  font-weight: bold;
   font-size: 38px;
   margin-top: 100px;
 }
@@ -100,18 +96,16 @@ a .footer:hover {
   position: relative;
   top: 21px;
   left: 100px;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.75;
-  font-weight: bold;
 }
 
 .temp-details {
   position: relative;
   left: 418px;
   bottom: 80px;
-  font-size: 15px;
+  font-size: 12px;
   line-height: 1.75;
-  font-weight: bold;
 }
 
 .weather-icon {
@@ -136,21 +130,21 @@ a .footer:hover {
 }
 .day-2 {
   top: 305px;
-  left: -89px;
+  left: -86px;
 }
 .day-3 {
-  top: 303px;
-  left: 29px;
+  top: 305px;
+  left: 20px;
 }
 .day-4 {
   top: 238px;
-  left: 180px;
+  left: 149px;
 }
 .day-5 {
   top: 109px;
-  left: 279px;
+  left: 240px;
 }
 .day-6 {
   top: -25px;
-  left: 333px;
+  left: 325px;
 }
