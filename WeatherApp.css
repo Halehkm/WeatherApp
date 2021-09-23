@@ -86,11 +86,13 @@ a .footer:hover {
   position: relative;
   font-size: 38px;
   margin-top: 100px;
+  left: 23px;
 }
 .units {
   font-size: small;
   position: absolute;
   top: 10px;
+  left:76px;
 }
 .current-date {
   position: relative;
@@ -102,8 +104,8 @@ a .footer:hover {
 
 .temp-details {
   position: relative;
-  left: 418px;
-  bottom: 80px;
+  left: 458px;
+  bottom: 68px;
   font-size: 12px;
   line-height: 1.75;
 }
