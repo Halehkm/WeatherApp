@@ -12,4 +12,5 @@ I was asked to Build a weather app with a search engine and API integration host
 
 ## Bootcamp Profile 
 Link to project: https://www.shecodes.io/workshops/shecodes-plus-b4e48e3b-b0a9-42bc-aafa-a4b5e361803e/projects/508317
+
 Link to certificate: https://www.shecodes.io/certificates/998961c0667dfb8be770f3cef6ec62cb
